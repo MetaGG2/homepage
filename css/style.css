@@ -1,0 +1,102 @@
+body {
+    background-color: #1f1f26;
+    margin: 0px;
+    animation: fadeIn ease 5s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+canvas {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    height: 100%;
+    width: 100%;
+}
+
+#menu {  
+    align-items: center;
+    display: flex;
+    height: 100vh;
+    width: 100vw;
+}
+
+#menu-items {
+    margin-left: clamp(4rem, 20vw, 48rem);
+    position: relative;
+    z-index: 3;
+}
+
+#menu[data-active-index="0"] > #image-icon {
+    animation: fadeIn ease 0.3s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    background-image: url("/img/search.png");
+}
+
+#menu[data-active-index="1"] > #image-icon {
+    animation: fadeIn ease 0.3s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    background-image: url("/img/bookmark.png")
+}
+
+#menu[data-active-index="2"] > #image-icon {
+    background-position: 0% -75%;
+}
+
+#menu[data-active-index="3"] > #image-icon {
+    background-position: 0% -100%;
+}
+
+
+#image-icon {
+    background-color: rgba(255, 255, 255, 0);
+    background-image: url("/img/search.png");
+    background-position: 0% 0%;
+    background-repeat: no-repeat;
+    background-size: 40vmin 40vmin;
+    height: 40vh;
+    left: 20px;
+    position: absolute;
+    top: 300px;
+    transition: 
+        background-size 800ms ease,
+        background-position 800ms ease;
+    width: 25vw;
+    z-index: 2;
+}
+
+#menu-items:hover ~ #image-icon {
+    background-size: 36vmin 36vmin;
+}
+
+#menu-items:hover > .menu-item {
+    opacity: 0.3;
+}
+  
+#menu-items:hover > .menu-item:hover {
+    opacity: 1; 
+}
+  
+.menu-item {
+    color: white;
+    cursor: pointer;
+    display: block;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: clamp(3rem, 8vw, 8rem);
+    padding: clamp(0.25rem, 0.5vw, 1rem) 0rem;
+    text-decoration: none;
+    transition: opacity 400ms ease;
+}
+  
