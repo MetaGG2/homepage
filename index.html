@@ -9,20 +9,30 @@
         <link rel="shortcut icon" type="image/jpg" href="favicon.ico"/>
         <link rel="stylesheet" href="css/style.css">
         <link href='https://fonts.googleapis.com/css?family=Lato:300,400,700' rel='stylesheet' type='text/css'>
-        <script src="js/index.js" type="text/javascript" defer></script>
+
+        <script src="js/menu.js" type="text/javascript" defer></script>
+        <script src="js/time.js" type="text/javascript" defer></script>
 
         <link rel="stylesheet" href="css/stars.css">
     </head>
     <body>
-        <canvas id="bgCanvas"></canvas>
+        <div id="time-date">
+            <span class="time-date" id="time"></span>
+            <span class="time-date" id="date"></span>
+        </div>
+
+        <div id="weather">
+            <img src="https://w.bookcdn.com/weather/picture/32_11752_0_1_3658db_250_2a48ba_ffffff_ffffff_1_2071c9_ffffff_0_6.png?scode=2&domid=w209&anc_id=70302" id="weather-img"/>
+        </div>
+
         <div id="menu">
             <div id="menu-items">
-                <a href="#" class="menu-item">Search</a>
-                <a href="#" class="menu-item">Bookmarks</a>
+                <a class="menu-item">Search</a>
+                <a class="menu-item">Bookmarks</a>
             </div>
-
             <div id="image-icon"></div>
         </div>
+
         <div id='stars'></div>
         <div id='stars2'></div>
         <div id='stars3'></div>        

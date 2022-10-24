@@ -16,14 +16,6 @@ body {
     }
 }
 
-canvas {
-    position: absolute;
-    left: 0px;
-    top: 0px;
-    height: 100%;
-    width: 100%;
-}
-
 #menu {  
     align-items: center;
     display: flex;
@@ -32,8 +24,10 @@ canvas {
 }
 
 #menu-items {
-    margin-left: clamp(4rem, 20vw, 48rem);
-    position: relative;
+    margin-left: clamp(4rem, 20vw, 24rem);
+    position: absolute;
+    right: 600;
+    bottom: 500;
     z-index: 3;
 }
 
@@ -99,4 +93,51 @@ canvas {
     text-decoration: none;
     transition: opacity 400ms ease;
 }
-  
+
+#time {
+    position: absolute;
+    text-align: center;
+    top: 15%;
+    left: 32%;
+    color: #FFF;
+    text-align: left;
+    font-family: "lato", sans-serif;
+    font-weight: 300;
+    font-size: 50px;
+    letter-spacing: 10px;
+    margin-top: -60px;
+    padding-left: 10px;
+    z-index: 3;
+}
+
+#date {
+    position: absolute;
+    text-align: center;
+    top: 25%;
+    left: 32%;
+    color: #FFF;
+    text-align: left;
+    font-family: "lato", sans-serif;
+    font-weight: 300;
+    font-size: 50px;
+    letter-spacing: 10px;
+    margin-top: -60px;
+    padding-left: 10px;
+    z-index: 3;
+}
+
+.time-date {
+    background: -webkit-linear-gradient(white, #38495a);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+#weather-img {
+    border-radius: 10%;
+    border: 10px ridge #38495a;
+    position: absolute;
+    top: 8%;
+    left: 55%;
+    z-index: 3;
+}
