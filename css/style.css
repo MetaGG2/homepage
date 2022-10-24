@@ -41,14 +41,14 @@ canvas {
     animation: fadeIn ease 0.3s;
     animation-iteration-count: 1;
     animation-fill-mode: forwards;
-    background-image: url("/img/search.png");
+    background-image: url("../img/search.png");
 }
 
 #menu[data-active-index="1"] > #image-icon {
     animation: fadeIn ease 0.3s;
     animation-iteration-count: 1;
     animation-fill-mode: forwards;
-    background-image: url("/img/bookmark.png")
+    background-image: url("../img/bookmark.png")
 }
 
 #menu[data-active-index="2"] > #image-icon {
@@ -62,7 +62,7 @@ canvas {
 
 #image-icon {
     background-color: rgba(255, 255, 255, 0);
-    background-image: url("/img/search.png");
+    background-image: url("../img/search.png");
     background-position: 0% 0%;
     background-repeat: no-repeat;
     background-size: 40vmin 40vmin;
