@@ -10,8 +10,11 @@
         <link rel="stylesheet" href="css/style.css">
         <link href='https://fonts.googleapis.com/css?family=Lato:300,400,700' rel='stylesheet' type='text/css'>
 
+        <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+        <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
         <script src="js/menu.js" type="text/javascript" defer></script>
         <script src="js/time.js" type="text/javascript" defer></script>
+        <script src="js/scroll.js" type="text/javascript" defer></script>
 
         <link rel="stylesheet" href="css/stars.css">
     </head>
@@ -22,19 +25,49 @@
         </div>
 
         <div id="weather">
-            <img src="https://w.bookcdn.com/weather/picture/32_18103_0_1_34495e_250_2c3e50_ffffff_ffffff_1_2071c9_ffffff_0_6.png?scode=2&domid=w209&anc_id=86882" id="weather-img"/>
+            <img src="https://w.bookcdn.com/weather/picture/32_18103_0_1_34495e_250_2c3e50_ffffff_ffffff_1_2071c9_ffffff_0_6.png?scode=2&domid=w209&anc_id=86882" id="weather-img" class="draggable"/>
         </div>
 
         <div id="menu">
             <div id="menu-items">
                 <a class="menu-item">Search</a>
-                <a class="menu-item">Bookmarks</a>
+                <a class="menu-item" id="bookmarks" onclick="scrollBookmarks()">Bookmarks</a>
             </div>
-            <div id="image-icon"></div>
+            <div id="image-icon" class="draggable"></div>
+        </div>
+
+        <div id="bookmarks-area">
+            <button onclick="scrollHome()">
+                <img src="favicon.ico" id="bm-button" class="home-button" width="128px" height="128px"/>
+            </button>
+
+            <ul id="bookmarks-list">
+                <a href="https://youtube.com"><li>
+                    <span>Youtube</span>
+                    <br>
+                    <img src="http://icons.iconarchive.com/icons/dtafalonso/android-lollipop/512/Youtube-icon.png" width="64px" height="64px" />
+                </li></a>
+                <a href="https://discord.com"><li>
+                    <span>Discord</span>
+                </li></a>
+                <a href="https://revolt.chat"><li>
+                    <span>Revolt</span>
+                </li></a>
+                <a href="https://spotify.com"><li>
+                    <span>Spotify</span>
+                </li></a>
+            </ul>
         </div>
 
         <div id='stars'></div>
         <div id='stars2'></div>
-        <div id='stars3'></div>        
+        <div id='stars3'></div>
+
+        <script>
+            $(function() {
+                $(".draggable").draggable();
+            });
+        </script>
+
     </body>
 </html>

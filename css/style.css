@@ -1,7 +1,15 @@
+html::-webkit-scrollbar {
+    display: none;
+}
+
+html {
+    scrollbar-width: none;
+}
+
 body {
     background-color: #1f1f26;
     margin: 0px;
-    animation: fadeIn ease 5s;
+    animation: fadeIn ease 2s;
     animation-iteration-count: 1;
     animation-fill-mode: forwards;
 }
@@ -16,7 +24,8 @@ body {
     }
 }
 
-#menu {  
+#menu {
+    position: absolute;
     align-items: center;
     display: flex;
     height: 100vh;
@@ -29,6 +38,10 @@ body {
     right: 600;
     bottom: 500;
     z-index: 3;
+    -webkit-user-select: none; /* Safari */        
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* IE10+/Edge */
+    user-select: none; /* Standard */
 }
 
 #menu[data-active-index="0"] > #image-icon {
@@ -97,24 +110,24 @@ body {
 #time {
     position: absolute;
     text-align: center;
-    top: 15%;
-    left: 32%;
+    top: 15vh;
+    left: 32vw;
     color: #FFF;
     text-align: left;
     font-family: "lato", sans-serif;
     font-weight: 300;
-    font-size: 50px;
-    letter-spacing: 10px;
-    margin-top: -60px;
-    padding-left: 10px;
+    font-size: clamp(1rem, 8vw, 3.125rem);
+    letter-spacing: 0.5208333333333334vw;
+    margin-top: -6.282722513089006vh;
+    padding-left: 0.5208333333333334vw;
     z-index: 3;
 }
 
 #date {
     position: absolute;
     text-align: center;
-    top: 25%;
-    left: 32%;
+    top: 25vh;
+    left: 32vw;
     color: #FFF;
     text-align: left;
     font-family: "lato", sans-serif;
@@ -131,13 +144,80 @@ body {
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
+    -webkit-user-select: none; /* Safari */        
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* IE10+/Edge */
+    user-select: none; /* Standard */
 }
 
 #weather-img {
     border-radius: 10%;
     border: 10px ridge #38495a;
     position: absolute;
-    top: 8%;
-    left: 55%;
+    top: 8vh;
+    left: 55vw;
     z-index: 3;
+}
+
+button {
+    background: transparent;
+    border: transparent;
+}
+
+#bookmarks-area {
+    position: absolute;
+    top: 200vh;
+}
+
+.home-button {
+    background: #1f1f26;
+    border-radius: 20%;
+    margin-bottom: 50px;
+}
+
+#bookmarks-list  {
+    list-style-type: none;
+    display: flex;
+    padding: none;
+    margin: none;
+    flex-wrap: row wrap;
+    align-items: baseline;
+    overflow: hidden;
+    text-align: center;
+}
+
+#bookmarks-list a {
+    text-decoration: none;
+}
+
+#bookmarks-list li img {
+    display: flex;
+    justify-content: center;
+    align-self: center;
+}
+
+#bookmarks-list li span {
+    display: flex;
+    font-family: "lato", sans-serif;
+    padding: 0.1vw;
+    color: #dcddde;
+    text-decoration: none;
+}
+
+#bookmarks-list li {
+    position: relative;
+    padding-right: 3vw;
+    margin-right: 2vw;
+    background-color: #36393f;
+    border-radius: 30%;
+    transition: .5s;
+    display: inline-flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    width: 3vw;
+}
+
+#bookmarks-list li:hover {
+    background-color: #565b65;
 }

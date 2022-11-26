@@ -13,5 +13,5 @@ function setTime() {
 
 function setDate() {
     date = new Date().toDateString();
-    document.getElementById("date").textContent = date.slice(4);
+    document.getElementById("date").textContent = date.slice(4) + "";
 }
